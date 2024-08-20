@@ -6,7 +6,7 @@
 - Opportunities to work on challenging projects and learn from experienced developers.
 
 ## 📂 Portfolio
-- [My Projects](your-github-projects-url)
+[Car Rental Management System](https://github.com/Bernardo-Dauber/Car-Rental-Management-System/blob/main/README.md)
 
 ##  🕹 Technologies & Tools
 
