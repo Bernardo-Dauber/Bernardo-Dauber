@@ -1,66 +1,44 @@
-# Bernardo Dauber Vieira
+# Hi, I'm Bernardo 👋
 
-**Software Engineer** building end-to-end **Generative AI** products — mostly Python and TypeScript on AWS, turning "the agent works in the demo" into multi-agent systems that are fast, scalable and production-ready.
+**Software Engineer / AI Engineer** from southern Brazil — I build things with LLMs, mostly in Python and TypeScript on AWS.
 
-My work has a theme: making an agent behave predictably outside the notebook. One contract between client and backend, one place for the agent's configuration, one source of truth for its tools and telemetry — so nothing has to be rewritten when the backend changes.
-
-Currently a **Software Engineer** (full-time, remote) in a team that turns GenAI ideas into real products, and a **Ciência da Computação** student at **Unisinos** (RS, Brazil).
+By day I work on generative AI that has to survive production: multi-agent systems, RAG over knowledge bases, document extraction, streaming chat, and all the unglamorous plumbing — prompt versions, tracing, cost and latency telemetry, Terraform. What I like most is the seam between the model and the user: the contract that makes an agent feel predictable instead of magical.
 
 ---
 
-## 🔭 What I build at work
+## 🌙 What I build for myself
 
-Products across **legal tech, real estate, education, media and e-commerce** — from PoC to production.
+- **`organizer`** — a self-hosted organizer for my own life (gym, finances, calendar on one date spine). Go + SQLite backend, React/TypeScript front, and a written spec and architecture decision record for every screen before I write code.
+- **`harness`** — one repo that configures all my coding agents (Claude Code, Hermes, Codex, opencode, Cursor and friends): shared skills, hooks and config, plus per-run telemetry so I can see where the agents actually save me time — and where they cost me rework.
+- **`workflow-orquestracao`** — my day planned by agents: it gathers my open PRs and the sprint's tickets, implements only the tasks I mark, opens draft PRs and never merges.
+- **RAG, MCP and memory experiments** — including [chat-agentcore](https://github.com/Bernardo-Dauber/chat-agentcore), a single-endpoint agent with retrieval over S3, an MCP server and short + long-term memory.
 
-- **Automated legal document generation** — a multi-agent system that produces structured legal petitions in **under 30 seconds** using parallel specialist agents. *(AWS Bedrock AgentCore · LangChain · LangGraph · Strands Agents)*
-- **Conversational AI for US real estate investors** — assistant that consolidates portfolio data and financial forecasts through a multi-agent architecture. *(OpenAI Agents & Tools · function calling · Python · AWS)*
-- **AI lesson-plan generator** — plans aligned with Brazil's national curriculum (BNCC), saving teachers hours of weekly planning. *(AWS Bedrock · Step Functions · Lambda · Docker · Python)*
-- **AI-powered video clip generation** — pipeline that finds and cuts highlight moments from long-form video based on emotion and storytelling. *(AWS Transcribe · Langflow · prompt engineering)*
+## 🎓 What I'm studying
 
-And the ground under it: RAG over knowledge bases, document extraction, streaming chat contracts, usage/cost telemetry, Terraform-managed AWS.
+My undergraduate thesis is about **uncertainty**: when an LLM says it's *80% confident* about a Brazilian financial fact, is it right 80% of the time? I measure that with proper scoring rules (Brier, log score, ECE), conformal prediction and VaR backtesting as a coverage test — with a side branch on whether generative models reproduce **tail risk** or quietly smooth it out exactly where it matters most.
 
-## 🧰 Personal projects
+Outside of that: markets and personal finance (I automate my own portfolio reporting), a lot of probability and risk, Linux as a daily driver, and occasionally a routing lab just for fun.
 
-- `harness` — single-source configuration for my coding agents: **8 harnesses** (Claude Code, pi, Hermes, opencode, Codex, Copilot, Cursor, Windsurf) driven from one repo — skills, agents, hooks and extensions as symlinks, app-rewritten configs as copies — plus per-run **telemetry** and a rework/cost/success report. `git clone` + `./install.sh` reproduces the whole setup.
-- `workflow-orquestracao` — daily task orchestration with agents: collects my open PRs and the current sprint's Jira tickets into a *plano do dia* issue, implements only the marked items in `git worktree`, opens **draft PRs** (never merges), then reports rework, success rate, cost and time from `telemetry/runs.jsonl`.
-- `organizer` — a self-hosted, single-user life organizer (**gym**, **finance**, **calendar** on a shared date spine): **Go + SQLite** backend, React/TypeScript frontend. Architecture docs, ADRs and a spec per screen before the first line of code.
-- `chat-template-aws-harness` — chat template whose agent backend is an **AgentCore Harness invoked directly by the Next.js server**: no container, no ECR image, deploy is a single `terraform apply`, SSE contract with the frontend untouched.
-- [chat-agentcore](https://github.com/Bernardo-Dauber/chat-agentcore) — PoC of a single-endpoint conversational agent with **RAG over S3 + Knowledge Base**, an **MCP server** and short/long-term **memory**.
-- [trabalho-ga-roteamento-ip](https://github.com/Bernardo-Dauber/trabalho-ga-roteamento-ip) — Containerlab/FRR lab with **5 routers** running RIPv2 and OSPFv2, plus **LARP**, a protocol of my own for active-latency routing metrics.
+## 🛠️ Tools I reach for
 
-## 🎓 Undergraduate thesis (TCC)
+**Python · TypeScript · Go · Java** — AWS (Bedrock, AgentCore, Lambda, Step Functions, S3, DynamoDB, Terraform) · Strands Agents, LangChain, LangGraph, OpenAI Agents · RAG, MCP, knowledge bases · FastAPI, NestJS, Next.js, React · PostgreSQL, SQLite, MongoDB, Prisma · Docker.
 
-**Uncertainty and calibration of LLMs in financial text.** If a language model says it is *80% confident* about a Brazilian financial fact, is it right 80% of the time? Proper scoring rules (Brier, log score, ECE, reliability diagrams), conformal prediction for guaranteed coverage, VaR backtesting as a coverage test — plus a branch on **synthetic generation and tail risk** (GAN/diffusion vs. GARCH, block bootstrap, EVT), judged by tail properties instead of accuracy.
-
-## 🛠️ Technical stack
-
-| | |
-|---|---|
-| **Languages** | Python · TypeScript · JavaScript · Go · Java · SQL |
-| **GenAI / agents** | AWS Bedrock (AgentCore, Knowledge Bases) · Strands Agents · LangChain · LangGraph · OpenAI Agents & Tools · MCP · RAG · prompt engineering |
-| **Cloud / Backend** | AWS Lambda · Step Functions · DynamoDB · S3 · Amplify · Cognito · Terraform · FastAPI · NestJS · Node.js · Spring Boot |
-| **Frontend** | React · Next.js · TypeScript |
-| **Data** | PostgreSQL · MongoDB · SQLite · Prisma |
-| **Practices** | system design, ADRs and written specs, streaming (SSE) contracts, agent-run telemetry, Docker, GitHub Actions |
-
-## 📫 How to reach me
+## 📫 Say hi
 
 - [LinkedIn](https://www.linkedin.com/in/bernardo-dauber/)
 - Email: be.daubervieira@gmail.com
 
 <details>
-<summary>🇧🇷 Versão em português</summary>
+<summary>🇧🇷 Em português</summary>
 
-**Software Engineer** construindo produtos de **IA generativa** de ponta a ponta — principalmente Python e TypeScript na AWS, transformando "o agente funciona no demo" em sistemas multiagente rápidos, escaláveis e prontos para produção.
+**Software Engineer / AI Engineer** do sul do Brasil — construo coisas com LLMs, principalmente em Python e TypeScript na AWS.
 
-No trabalho, produtos em **legal tech, imobiliário, educação, mídia e e-commerce**:
-- Geração automatizada de documentos jurídicos — sistema multiagente que produz petições estruturadas em menos de 30 segundos com agentes especialistas em paralelo (AWS Bedrock AgentCore · LangChain · LangGraph · Strands Agents).
-- IA conversacional para investidores imobiliários nos EUA — consolida dados de carteira e projeções financeiras em arquitetura multiagente (OpenAI Agents & Tools · function calling · Python · AWS).
-- Gerador de planos de aula alinhados à BNCC (AWS Bedrock · Step Functions · Lambda · Docker · Python).
-- Geração de cortes de vídeo por emoção e narrativa (AWS Transcribe · Langflow · prompt engineering).
+De dia trabalho com IA generativa que precisa sobreviver à produção: sistemas multiagente, RAG sobre bases de conhecimento, extração de documentos, chat com streaming e toda a parte pouco glamourosa — versões de prompt, tracing, telemetria de custo e latência, Terraform. O que mais gosto é a costura entre o modelo e quem usa: o contrato que faz o agente parecer previsível em vez de mágico.
 
-**Projetos pessoais** — `harness` (configuração em fonte única para 8 harnesses de código, com telemetria por execução), `workflow-orquestracao` (plano do dia a partir de PRs e Jira, implementação em worktrees, PRs em draft), `organizer` (organizador pessoal auto-hospedado: academia, finanças e calendário; Go + SQLite no backend, React/TypeScript no front) e o PoC `chat-agentcore` (RAG em S3/Knowledge Base, servidor MCP e memória).
+**O que construo para mim** — `organizer` (organizador pessoal auto-hospedado: academia, finanças e calendário numa mesma espinha de datas; Go + SQLite no backend, React/TypeScript no front), `harness` (um repositório que configura todos os meus agentes de código, com telemetria por execução), `workflow-orquestracao` (meu dia planejado por agentes: PRs e tickets, implementação em worktrees, PRs em draft, nunca merge) e experimentos de RAG, MCP e memória.
 
-**TCC** — incerteza e calibração de LLMs em textos financeiros (Brier, log score, ECE, predição conformal, backtesting de VaR) e geração sintética de risco de cauda.
+**TCC** — incerteza: quando um LLM diz que tem 80% de certeza sobre um fato financeiro brasileiro, ele acerta 80% das vezes? Brier, log score, ECE, predição conformal, backtesting de VaR e uma verificação de se modelos generativos reproduzem risco de cauda ou suavizam justamente onde mais importa.
+
+Fora disso: mercado e finanças pessoais (automatizo meus próprios relatórios), probabilidade e risco, Linux no dia a dia e, de vez em quando, um lab de roteamento por diversão.
 
 </details>
